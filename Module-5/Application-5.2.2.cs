@@ -1,4 +1,5 @@
-﻿using System;
+﻿/*
+using System;
 
 namespace Module_5
 {
@@ -23,19 +24,19 @@ namespace Module_5
 
             for (int i = 0; i < favcolors.Length; i++)
             {
-                favcolors[i] = ShowColor(name);
+                favcolors[i] = ShowColor(name, age);
             }
 
             Console.WriteLine("Ваши любимые цвета:");
-            foreach (var color in favcolors)
+            foreach (var Color in favcolors)
             {
-                Console.WriteLine(color);
+                Console.WriteLine(Color);
             }
 
-            static string ShowColor(string username)
+            static string ShowColor(string username, int userage)
             {
 
-                Console.WriteLine("{0}, напишите свой любимый цвет на английском с маленькой буквы", username);
+                Console.WriteLine("{0}, {1}, \nНапишите свой любимый цвет на английском с маленькой буквы", username, userage);
                 var colors = Console.ReadLine();
 
                 switch (colors)
@@ -72,3 +73,4 @@ namespace Module_5
         }
     }
 }
+*/
