@@ -6,9 +6,36 @@ namespace Module_5
     {
         public static void Main(string[] args)
         {
+            string name;
+            int age;
+
+            Console.Write("Введите имя: ");
+            name = Console.ReadLine();
+
+            Console.Write("Введите возраст с цифрами: ");
+            age = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Ваше имя: {0}", name);
+            Console.WriteLine("Ваш возраст: {0}", age);
+
+
+            var favcolors = new string[3];
+
+            for (int i = 0; i < favcolors.Length; i++)
+            {
+                favcolors[i] = ShowColor(name);
+            }
+
+            Console.WriteLine("Ваши любимые цвета:");
+            foreach (var color in favcolors)
+            {
+                Console.WriteLine(color);
+            }
+
             static string ShowColor(string username)
             {
-                Console.WriteLine("{0} Напишите свой любимый цвет на английском с маленькой буквы", username);
+
+                Console.WriteLine("{0}, напишите свой любимый цвет на английском с маленькой буквы", username);
                 var colors = Console.ReadLine();
 
                 switch (colors)
@@ -40,32 +67,7 @@ namespace Module_5
                         break;
                 }
 
-                (string name, int age) anketa;
-
-                Console.Write("Введите имя: ");
-                anketa.name = Console.ReadLine();
-                Console.Write("Введите возраст с цифрами: ");
-                anketa.age = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine("Ваше имя: {0}", anketa.name);
-                Console.WriteLine("Ваш возраст: {0}", anketa.age);
-
-
-                var favcolors = new string[3];
-
-                for (int i = 0; i < favcolors.Length; i++)
-                {
-                    favcolors[i] = ShowColor(username);
-                }
-
-                Console.WriteLine("Ваши любимые цвета:");
-                foreach (var color in favcolors)
-                {
-                    Console.WriteLine(color);
-                }
-
                 return colors;
-
             }
         }
     }
